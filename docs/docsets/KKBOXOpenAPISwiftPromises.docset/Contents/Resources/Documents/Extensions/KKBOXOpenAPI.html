@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KKBOXOpenAPI Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/KKBOXOpenAPI" class="dashAnchor"></a>
+    <a title="KKBOXOpenAPI Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">KKBOXOpenAPISwiftPromises Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/zonble/OpenAPI-Swift-Promises"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">KKBOXOpenAPISwiftPromises Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        KKBOXOpenAPI Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/KKBOXOpenAPI.html">KKBOXOpenAPI</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>KKBOXOpenAPI</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">KKBOXOpenAPI</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE34fetchAccessTokenByClientCredential0D07PromiseCyAA08KKAccessG0VGyF"></a>
+                    <a name="//apple_ref/swift/Method/fetchAccessTokenByClientCredential()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE34fetchAccessTokenByClientCredential0D07PromiseCyAA08KKAccessG0VGyF">fetchAccessTokenByClientCredential()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch an access token by passing client credential.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchAccessTokenByClientCredential</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKAccessToken</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L30-L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Tracks"></a>
+                <a name="//apple_ref/swift/Section/Tracks" class="dashAnchor"></a>
+                <a href="#/Tracks">
+                  <h3 class="section-name">Tracks</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKTrackInfoVGSS5track_AA11KKTerritoryO9territorytF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(track:territory:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKTrackInfoVGSS5track_AA11KKTerritoryO9territorytF">fetch(track:territory:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch a song track by giving a song track ID.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#tracks-track_id">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">track</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKTrackInfo</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the track.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L48-L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Albums"></a>
+                <a name="//apple_ref/swift/Section/Albums" class="dashAnchor"></a>
+                <a href="#/Albums">
+                  <h3 class="section-name">Albums</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKAlbumInfoVGSS5album_AA11KKTerritoryO9territorytF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(album:territory:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKAlbumInfoVGSS5album_AA11KKTerritoryO9territorytF">fetch(album:territory:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch an album by giving an album ID.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#albums-album_id">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">album</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKAlbumInfo</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the album.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L66-L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKTrackListVGSS13tracksInAlbum_AA11KKTerritoryO9territorytF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(tracksInAlbum:territory:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKTrackListVGSS13tracksInAlbum_AA11KKTerritoryO9territorytF">fetch(tracksInAlbum:territory:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch tracks contained in an album.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#albums-album_id-tracks">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">tracksInAlbum</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKTrackList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the album.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L80-L84">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Artist"></a>
+                <a name="//apple_ref/swift/Section/Artist" class="dashAnchor"></a>
+                <a href="#/Artist">
+                  <h3 class="section-name">Artist</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA12KKArtistInfoVGSS6artist_AA11KKTerritoryO9territorytF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(artist:territory:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA12KKArtistInfoVGSS6artist_AA11KKTerritoryO9territorytF">fetch(artist:territory:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch the profile by giving an artist ID.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">artist</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKArtistInfo</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the artist.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L98-L102">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKAlbumListVGSS20albumsBelongToArtist_AA11KKTerritoryO9territorySi6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(albumsBelongToArtist:territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKAlbumListVGSS20albumsBelongToArtist_AA11KKTerritoryO9territorySi6offsetSi5limittF">fetch(albumsBelongToArtist:territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch albums of an artist.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-albums">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">albumsBelongToArtist</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKAlbumList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the artist.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 200 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L114-L118">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKTrackListVGSS17topTracksOfArtist_AA11KKTerritoryO9territorySi6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(topTracksOfArtist:territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKTrackListVGSS17topTracksOfArtist_AA11KKTerritoryO9territorySi6offsetSi5limittF">fetch(topTracksOfArtist:territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch top tracks of an artist.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-toptracks">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">topTracksOfArtist</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKTrackList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the artist.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 200 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L130-L134">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA12KKArtistListVGSS22relatedArtistsOfArtist_AA11KKTerritoryO9territorySi6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(relatedArtistsOfArtist:territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA12KKArtistListVGSS22relatedArtistsOfArtist_AA11KKTerritoryO9territorySi6offsetSi5limittF">fetch(relatedArtistsOfArtist:territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch related artists of an artist.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#artists-artist_id-relatedartists">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">relatedArtistsOfArtist</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKArtistList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ID of the artist.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 20 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L146-L150">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Shared%20Playlists"></a>
+                <a name="//apple_ref/swift/Section/Shared Playlists" class="dashAnchor"></a>
+                <a href="#/Shared%20Playlists">
+                  <h3 class="section-name">Shared Playlists</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA14KKPlaylistInfoVGSS8playlist_AA11KKTerritoryO9territorytF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(playlist:territory:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA14KKPlaylistInfoVGSS8playlist_AA11KKTerritoryO9territorytF">fetch(playlist:territory:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch a playlist&rsquo;s metadat and tracks by giving the playlist ID</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">playlist</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKPlaylistInfo</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The playlist ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L165-L169">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKTrackListVGSS16tracksInPlaylist_AA11KKTerritoryO9territorySi6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(tracksInPlaylist:territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA11KKTrackListVGSS16tracksInPlaylist_AA11KKTerritoryO9territorySi6offsetSi5limittF">fetch(tracksInPlaylist:territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch tracks contained in a playlist.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#sharedplaylists-playlist_id-tracks">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">tracksInPlaylist</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKTrackList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The playlist ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 20 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L181-L185">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Featured%20Playlists"></a>
+                <a name="//apple_ref/swift/Section/Featured Playlists" class="dashAnchor"></a>
+                <a href="#/Featured%20Playlists">
+                  <h3 class="section-name">Featured Playlists</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE22fetchFeaturedPlaylists0D07PromiseCyAA14KKPlaylistListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetchFeaturedPlaylists(territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE22fetchFeaturedPlaylists0D07PromiseCyAA14KKPlaylistListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF">fetchFeaturedPlaylists(territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch the featued playlists.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#featuredplaylists">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchFeaturedPlaylists</span><span class="p">(</span><span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKPlaylistList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 100 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L200-L204">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/New-Hits%20Playlists"></a>
+                <a name="//apple_ref/swift/Section/New-Hits Playlists" class="dashAnchor"></a>
+                <a href="#/New-Hits%20Playlists">
+                  <h3 class="section-name">New-Hits Playlists</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE21fetchNewHitsPlaylists0D07PromiseCyAA14KKPlaylistListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetchNewHitsPlaylists(territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE21fetchNewHitsPlaylists0D07PromiseCyAA14KKPlaylistListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF">fetchNewHitsPlaylists(territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch the New-Hits playlists.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#newhitsplaylists">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchNewHitsPlaylists</span><span class="p">(</span><span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKPlaylistList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 10 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L220-L224">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Featured%20Playlists%20Categories"></a>
+                <a name="//apple_ref/swift/Section/Featured Playlists Categories" class="dashAnchor"></a>
+                <a href="#/Featured%20Playlists%20Categories">
+                  <h3 class="section-name">Featured Playlists Categories</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE31fetchFeaturedPlaylistCategories0D07PromiseCyAA010KKFeaturedG12CategoryListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetchFeaturedPlaylistCategories(territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE31fetchFeaturedPlaylistCategories0D07PromiseCyAA010KKFeaturedG12CategoryListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF">fetchFeaturedPlaylistCategories(territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch featured playlist categories.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchFeaturedPlaylistCategories</span><span class="p">(</span><span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKFeaturedPlaylistCategoryList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 100 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L240-L244">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE21fetchFeaturedPlaylist0D07PromiseCyAA010KKFeaturedG8CategoryVGSS02inJ0_AA11KKTerritoryO9territorySi6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetchFeaturedPlaylist(inCategory:territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE21fetchFeaturedPlaylist0D07PromiseCyAA010KKFeaturedG8CategoryVGSS02inJ0_AA11KKTerritoryO9territorySi6offsetSi5limittF">fetchFeaturedPlaylist(inCategory:territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch featuerd playlists in a category.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#featuredplaylistcategories-category_id-playlists">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchFeaturedPlaylist</span><span class="p">(</span><span class="n">inCategory</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKFeaturedPlaylistCategory</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The category ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 100 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L256-L260">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Mood%20Radio%20Stations"></a>
+                <a name="//apple_ref/swift/Section/Mood Radio Stations" class="dashAnchor"></a>
+                <a href="#/Mood%20Radio%20Stations">
+                  <h3 class="section-name">Mood Radio Stations</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE17fetchMoodStations0D07PromiseCyAA18KKRadioStationListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetchMoodStations(territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE17fetchMoodStations0D07PromiseCyAA18KKRadioStationListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF">fetchMoodStations(territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch mood station categories.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#moodstations">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchMoodStations</span><span class="p">(</span><span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKRadioStationList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 100 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L275-L279">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA14KKRadioStationVGSS012tracksInMoodH0_AA11KKTerritoryO9territorySi6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(tracksInMoodStation:territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA14KKRadioStationVGSS012tracksInMoodH0_AA11KKTerritoryO9territorySi6offsetSi5limittF">fetch(tracksInMoodStation:territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch tracks in a mood radio station.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#moodstations-station_id">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">tracksInMoodStation</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKRadioStation</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Mood station ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 100 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L291-L295">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Genre%20Radio%20Stations"></a>
+                <a name="//apple_ref/swift/Section/Genre Radio Stations" class="dashAnchor"></a>
+                <a href="#/Genre%20Radio%20Stations">
+                  <h3 class="section-name">Genre Radio Stations</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE18fetchGenreStations0D07PromiseCyAA18KKRadioStationListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetchGenreStations(territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE18fetchGenreStations0D07PromiseCyAA18KKRadioStationListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF">fetchGenreStations(territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch genre station categories.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#genrestations">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchGenreStations</span><span class="p">(</span><span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKRadioStationList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 100 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L308-L312">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA14KKRadioStationVGSS013tracksInGenreH0_AA11KKTerritoryO9territorySi6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(tracksInGenreStation:territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA14KKRadioStationVGSS013tracksInGenreH0_AA11KKTerritoryO9territorySi6offsetSi5limittF">fetch(tracksInGenreStation:territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch tracks in a genre radio station.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#genrestations-station_id">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">tracksInGenreStation</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKRadioStation</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Genre station ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 100 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L324-L328">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/New%20Released%20Albums"></a>
+                <a name="//apple_ref/swift/Section/New Released Albums" class="dashAnchor"></a>
+                <a href="#/New%20Released%20Albums">
+                  <h3 class="section-name">New Released Albums</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE31fetchNewReleaseAlbumsCategories0D07PromiseCyAA013KKNewReleasedH12CategoryListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetchNewReleaseAlbumsCategories(territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE31fetchNewReleaseAlbumsCategories0D07PromiseCyAA013KKNewReleasedH12CategoryListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF">fetchNewReleaseAlbumsCategories(territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch the categories of the new released albums.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchNewReleaseAlbumsCategories</span><span class="p">(</span><span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKNewReleasedAlbumsCategoryList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 100 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L344-L348">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA27KKNewReleasedAlbumsCategoryVGSS03newhi5UnderJ0_AA11KKTerritoryO9territorySi6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetch(newReleasedAlbumsUnderCategory:territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE5fetch0D07PromiseCyAA27KKNewReleasedAlbumsCategoryVGSS03newhi5UnderJ0_AA11KKTerritoryO9territorySi6offsetSi5limittF">fetch(newReleasedAlbumsUnderCategory:territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch albums in a given new released albums category.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#newreleasecategories-category_id">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">newReleasedAlbumsUnderCategory</span> <span class="kt">ID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKNewReleasedAlbumsCategory</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The categiry ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 100 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L360-L364">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Charts"></a>
+                <a name="//apple_ref/swift/Section/Charts" class="dashAnchor"></a>
+                <a href="#/Charts">
+                  <h3 class="section-name">Charts</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE11fetchCharts0D07PromiseCyAA14KKPlaylistListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/fetchCharts(territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE11fetchCharts0D07PromiseCyAA14KKPlaylistListVGAA11KKTerritoryO9territory_Si6offsetSi5limittF">fetchCharts(territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fetch charts.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#charts">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fetchCharts</span><span class="p">(</span><span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKPlaylistList</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 50 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L380-L384">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Search"></a>
+                <a name="//apple_ref/swift/Section/Search" class="dashAnchor"></a>
+                <a href="#/Search">
+                  <h3 class="section-name">Search</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE6search0D07PromiseCyAA15KKSearchResultsVGSS4with_AA0G4TypeV5typesAA11KKTerritoryO9territorySi6offsetSi5limittF"></a>
+                    <a name="//apple_ref/swift/Method/search(with:types:territory:offset:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17KKBOXOpenAPISwift0A3APIC0aB8PromisesE6search0D07PromiseCyAA15KKSearchResultsVGSS4with_AA0G4TypeV5typesAA11KKTerritoryO9territorySi6offsetSi5limittF">search(with:types:territory:offset:limit:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Search in KKBOX&rsquo;s music library.</p>
+
+<p>See <a href="https://docs-en.kkbox.codes/v1.1/reference#search">API reference</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">search</span><span class="p">(</span><span class="n">with</span> <span class="nv">keyword</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">types</span><span class="p">:</span> <span class="kt">KKSearchType</span><span class="p">,</span> <span class="nv">territory</span><span class="p">:</span> <span class="kt">KKTerritory</span> <span class="o">=</span> <span class="o">.</span><span class="n">taiwan</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">KKSearchResults</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyword</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The search keyword.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>types</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Artists, albums, tracks or playlists.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>territory</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The territory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The offset. 0 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit. 50 by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zonble/OpenAPI-Swift-Promises/tree/1.0.0/Sources/KKBOXOpenAPISwiftPromises/KKBOXOpenAPISwiftPromises.swift#L400-L405">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://developer.kkbox.com" target="_blank" rel="external">KKBOX</a>. All rights reserved. (Last updated: 2018-02-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

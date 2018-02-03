@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KKBOXOpenAPISwiftPromises  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="KKBOXOpenAPISwiftPromises  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">KKBOXOpenAPISwiftPromises Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/zonble/OpenAPI-Swift-Promises"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">KKBOXOpenAPISwiftPromises Reference</a>
+        <img id="carat" src="img/carat.png" />
+        KKBOXOpenAPISwiftPromises  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/KKBOXOpenAPI.html">KKBOXOpenAPI</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='kkbox-open-api-swift-sdk-promises-extension' class='heading'>KKBOX Open-API Swift SDK Promises Extension</h1>
+
+<p>Use KKBOX&rsquo;s Swift SDK in a promising way.</p>
+<h2 id='introduction' class='heading'>Introduction</h2>
+
+<p>The project extends <a href="https://github.com/KKBOX/OpenAPI-Swift">KKBOX&rsquo;s Open API Swift SDK</a> by adopting Google&rsquo;s <a href="https://github.com/google/promises">Promisises library</a>. it provides an alternative way to do aynchronized API calls.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>You can only install the extension with Swift Package Manager right now. Please add </p>
+<pre class="highlight swift"><code><span class="c1">// swift-tools-version:4.0</span>
+
+<span class="kd">import</span> <span class="kt">PackageDescription</span>
+
+<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="s">"YourTargetName"</span><span class="p">,</span>
+    <span class="nv">products</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">executable</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"YourTargetName"</span><span class="p">,</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="s">"YourTargetName"</span><span class="p">])</span>
+    <span class="p">],</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/zonble/OpenAPI-Swift-Promises"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMinor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"1.0.0"</span><span class="p">))</span>
+    <span class="p">],</span>
+    <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">target</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"YourTargetName"</span><span class="p">,</span> <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="s">"KKBOXOpenAPISwift"</span><span class="p">],</span> <span class="nv">path</span><span class="p">:</span> <span class="s">"./Path/To/Your/Sources"</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre>
+
+<p>into your <code>Package.swift</code> file. And then run <code>swift package update</code> under command line.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>While working with KKBOX&rsquo;s Open API Swift SDK, you may write code with nested callback handling like this:</p>
+<pre class="highlight swift"><code><span class="n">_</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="k">self</span><span class="o">.</span><span class="kt">API</span><span class="o">.</span><span class="n">fetchAccessTokenByClientCredential</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
+        <span class="n">_</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="k">self</span><span class="o">.</span><span class="kt">API</span><span class="o">.</span><span class="nf">fetch</span><span class="p">(</span><span class="nv">track</span><span class="p">:</span> <span class="s">"4kxvr3wPWkaL9_y3o_"</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
+            <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+            <span class="k">case</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="k">let</span> <span class="nv">track</span><span class="p">):</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">track</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Promises fix the callback hells. After adding the extension, you can make the code above like this:</p>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="kt">API</span><span class="o">.</span><span class="nf">fetchAccessTokenByClientCredential</span><span class="p">()</span><span class="o">.</span><span class="n">then</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span>
+    <span class="k">return</span> <span class="k">self</span><span class="o">.</span><span class="kt">API</span><span class="o">.</span><span class="nf">fetch</span><span class="p">(</span><span class="nv">track</span><span class="p">:</span> <span class="s">"4kxvr3wPWkaL9_y3o_"</span><span class="p">)</span>
+<span class="p">}</span> <span class="o">.</span><span class="n">then</span> <span class="p">{</span> <span class="n">track</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">track</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span> <span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='license' class='heading'>License</h2>
+
+<p>Copyright 2018 KKBOX Technologies Limited</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the <q>License</q>);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at</p>
+<pre class="highlight plaintext"><code>http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an <q>AS IS</q> BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://developer.kkbox.com" target="_blank" rel="external">KKBOX</a>. All rights reserved. (Last updated: 2018-02-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
