@@ -469,6 +469,29 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 		self.wait(for: [exp], timeout: 3)
 	}
 
+	func testSearchAll() {
+		let exp = self.expectation(description: "testSearchAll")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.search(with: "Love", types: [
+				.track,
+				.album,
+				.artist,
+				.playlist
+				])
+		}.then { searchResults in
+			XCTAssertNotNil(searchResults)
+			XCTAssertNotNil(searchResults.trackResults)
+			XCTAssertNotNil(searchResults.albumResults)
+			XCTAssertNotNil(searchResults.artistResults)
+			XCTAssertNotNil(searchResults.playlistsResults)
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
 	static var allTests = [
 		("testFetchAccessToken", testFetchAccessToken),
 		("testFetchWithInvalidCredential", testFetchWithInvalidCredential),
@@ -490,5 +513,6 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 		("testFetchTracksInGenreStation", testFetchTracksInGenreStation),
 		("testFetchNewReleaseAlbumsCategories", testFetchNewReleaseAlbumsCategories),
 		("testFetchNewReleaseAlbumsUnderCategory", testFetchNewReleaseAlbumsUnderCategory),
-	]
+		("testSearchAll", testSearchAll),
+		]
 }
