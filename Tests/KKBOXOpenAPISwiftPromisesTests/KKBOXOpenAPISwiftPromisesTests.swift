@@ -68,11 +68,11 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 	func testFetchAccessToken() {
 		let exp = self.expectation(description: "testFetchAccessToken")
 		self.API.fetchAccessTokenByClientCredential().then { token in
-				exp.fulfill()
-			}.catch { error in
-				XCTFail(error.localizedDescription)
-				exp.fulfill()
-			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
 		self.wait(for: [exp], timeout: 3)
 	}
 
@@ -80,29 +80,238 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 		let exp = self.expectation(description: "testFetchWithInvalidCredential")
 		self.API = KKBOXOpenAPI(clientID: "121321223123123", secret: "1231231321213")
 		self.API.fetchAccessTokenByClientCredential().then { token in
-				XCTFail("It's impossible!")
-				exp.fulfill()
-			}.catch { error in
-				exp.fulfill()
-			}
+			XCTFail("It's impossible!")
+			exp.fulfill()
+		}.catch { error in
+			exp.fulfill()
+		}
 		self.wait(for: [exp], timeout: 3)
 	}
 
 	func testFetchTrack() {
 		let exp = self.expectation(description: "testFetchAccessToken")
 		self.API.fetchAccessTokenByClientCredential().then { token in
-				return self.API.fetch(track: "4kxvr3wPWkaL9_y3o_")
-			}.then { track in
+			return self.API.fetch(track: "4kxvr3wPWkaL9_y3o_")
+		}.then { track in
+			self.validate(track: track)
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchAlbum() {
+		let exp = self.expectation(description: "testFetchAccessToken")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(album: "WpTPGzNLeutVFHcFq6")
+		}.then { album in
+			self.validate(album: album)
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchInvalidAlbum() {
+		let exp = self.expectation(description: "testFetchInvalidAlbum")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(album: "WpTPGzNLeutVFHcFq6")
+		}.then { album in
+			XCTFail()
+			exp.fulfill()
+		}.catch { error in
+			XCTAssertTrue(error.localizedDescription == "Resource does not exist")
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchTracksInAlbum() {
+		let exp = self.expectation(description: "testFetchTracksInAlbum")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(tracksInAlbum: "WpTPGzNLeutVFHcFq6")
+		}.then { tracks in
+			for track in tracks.tracks {
 				self.validate(track: track)
-				exp.fulfill()
-			}.catch {error in
-				exp.fulfill()
 			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchTracksInInvalidAlbum() {
+		let exp = self.expectation(description: "testFetchTracksInInvalidAlbum")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(tracksInAlbum: "11111")
+		}.then { tracks in
+			XCTFail()
+			exp.fulfill()
+		}.catch { error in
+			XCTAssertTrue(error.localizedDescription == "Resource does not exist")
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchArtist() {
+		let exp = self.expectation(description: "testFetchArtist")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(artist: "8q3_xzjl89Yakn_7GB")
+		}.then { artist in
+			self.validate(artist: artist)
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchAlbumsOfArtist() {
+		let exp = self.expectation(description: "testFetchAlbumsOfArtist")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(albumsBelongToArtist: "8q3_xzjl89Yakn_7GB")
+		}.then { albums in
+			for album in albums.albums {
+				self.validate(album: album)
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchTopTracksOfArtist() {
+		let exp = self.expectation(description: "testFetchTopTracksOfArtist")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(topTracksOfArtist: "8q3_xzjl89Yakn_7GB")
+		}.then { tracks in
+			for track in tracks.tracks {
+				self.validate(track: track)
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchRelatedArtists() {
+		let exp = self.expectation(description: "testFetchRelatedArtists")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(relatedArtistsOfArtist: "8q3_xzjl89Yakn_7GB")
+		}.then { artists in
+			for artist in artists.artists {
+				self.validate(artist: artist)
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchPlaylist() {
+		let exp = self.expectation(description: "testFetchPlaylist")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(playlist: "OsyceCHOw-NvK5j6Vo")
+		}.then { playlist in
+			self.validate(playlist: playlist)
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchTracksInPlaylist() {
+		let exp = self.expectation(description: "testFetchTracksInPlaylist")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(tracksInPlaylist: "OsyceCHOw-NvK5j6Vo")
+		}.then { tracks in
+			for track in tracks.tracks {
+				self.validate(track: track)
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchFeaturedPlaylists() {
+		let exp = self.expectation(description: "testFetchFeaturedPlaylists")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetchFeaturedPlaylists()
+		}.then { playlists in
+			for playlist in playlists.playlists {
+				self.validate(playlist: playlist)
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchNewHitsPlaylists() {
+		let exp = self.expectation(description: "testFetchNewHitsPlaylists")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetchNewHitsPlaylists()
+		}.then { playlists in
+			for playlist in playlists.playlists {
+				self.validate(playlist: playlist)
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchFeaturedPlaylistCategories() {
+		let exp = self.expectation(description: "testFetchFeaturedPlaylistCategories")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetchFeaturedPlaylistCategories()
+		}.then { categoeries in
+			for category in categoeries.categories {
+				XCTAssertTrue(category.ID.count > 0)
+				XCTAssertTrue(category.title.count > 0)
+				XCTAssertTrue(category.images.count > 0)
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
 		self.wait(for: [exp], timeout: 3)
 	}
 
 
-    static var allTests = [
-        ("testExample", testFetchAccessToken),
-    ]
+	static var allTests = [
+		("testFetchAccessToken", testFetchAccessToken),
+		("testFetchWithInvalidCredential", testFetchWithInvalidCredential),
+		("testFetchTrack", testFetchTrack),
+		("testFetchAlbum", testFetchAlbum),
+		("testFetchArtist", testFetchArtist),
+		("testFetchAlbumsOfArtist", testFetchAlbumsOfArtist),
+		("testFetchTopTracksOfArtist", testFetchTopTracksOfArtist),
+		("testFetchRelatedArtists", testFetchRelatedArtists),
+		("testFetchPlaylist", testFetchPlaylist),
+	]
 }
