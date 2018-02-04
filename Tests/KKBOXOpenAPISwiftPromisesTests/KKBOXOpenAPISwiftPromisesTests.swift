@@ -324,6 +324,133 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 		self.wait(for: [exp], timeout: 3)
 	}
 
+	func testFetchMoodStations() {
+		let exp = self.expectation(description: "testFetchMoodStations")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetchMoodStations()
+		}.then { stations in
+			for station in stations.stations {
+				XCTAssertNotNil(station)
+				XCTAssertTrue(station.ID.count > 0)
+				XCTAssertTrue(station.name.count > 0)
+				XCTAssertTrue(station.images?.count ?? 0 > 0)
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchTracksInMoodStation() {
+		let exp = self.expectation(description: "testFetchTracksInMoodStation")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(tracksInMoodStation: "4tmrBI125HMtMlO9OF")
+		}.then { station in
+			XCTAssertNotNil(station)
+			XCTAssertTrue(station.ID.count > 0)
+			XCTAssertTrue(station.name.count > 0)
+			XCTAssertTrue(station.tracks?.tracks.count ?? 0 > 0)
+			if let tracks = station.tracks?.tracks {
+				for track in tracks {
+					self.validate(track: track)
+				}
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchGenreStations() {
+		let exp = self.expectation(description: "testFetchGenreStations")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetchGenreStations()
+		}.then { stations in
+			for station in stations.stations {
+				XCTAssertNotNil(station)
+				XCTAssertTrue(station.ID.count > 0)
+				XCTAssertTrue(station.name.count > 0)
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchTracksInGenreStation() {
+		let exp = self.expectation(description: "testFetchTracksInGenreStation")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(tracksInGenreStation: "9ZAb9rkyd3JFDBC0wF")
+		}.then { station in
+			XCTAssertNotNil(station)
+			XCTAssertTrue(station.ID.count > 0)
+			XCTAssertTrue(station.name.count > 0)
+			XCTAssertTrue(station.tracks?.tracks.count ?? 0 > 0)
+			if let tracks = station.tracks?.tracks {
+				for track in tracks {
+					self.validate(track: track)
+				}
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchNewReleaseAlbumsCategories() {
+		let exp = self.expectation(description: "testFetchNewReleaseAlbumsCategories")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetchNewReleaseAlbumsCategories()
+		}.then { categories in
+			XCTAssertNotNil(categories)
+			XCTAssertTrue(categories.categories.count > 0)
+			for category in categories.categories {
+				XCTAssertTrue(category.ID.count > 0)
+				XCTAssertTrue(category.title.count > 0)
+			}
+			XCTAssertNotNil(categories.summary)
+			XCTAssertNotNil(categories.paging)
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
+	func testFetchNewReleaseAlbumsUnderCategory() {
+		let exp = self.expectation(description: "testFetchNewReleaseAlbumsUnderCategory")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetch(newReleasedAlbumsUnderCategory: "0pGAIGDf5SqYh_SyHr")
+		}.then { category in
+			XCTAssertTrue(category.ID.count > 0)
+			XCTAssertTrue(category.title.count > 0)
+			guard let albums = category.albums else {
+				XCTFail()
+				return
+			}
+			XCTAssertNotNil(albums)
+			XCTAssertTrue(albums.albums.count > 0)
+			for album in albums.albums {
+				self.validate(album: album)
+			}
+			XCTAssertNotNil(albums.summary)
+			XCTAssertNotNil(albums.paging)
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
 
 	static var allTests = [
 		("testFetchAccessToken", testFetchAccessToken),
@@ -340,5 +467,11 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 		("testFetchNewHitsPlaylists", testFetchNewHitsPlaylists),
 		("testFetchFeaturedPlaylistCategories", testFetchFeaturedPlaylistCategories),
 		("testFetchFeaturedPlaylistInCategory", testFetchFeaturedPlaylistInCategory),
+		("testFetchMoodStations", testFetchMoodStations),
+		("testFetchTracksInMoodStation", testFetchTracksInMoodStation),
+		("testFetchGenreStations", testFetchGenreStations),
+		("testFetchTracksInGenreStation", testFetchTracksInGenreStation),
+		("testFetchNewReleaseAlbumsCategories", testFetchNewReleaseAlbumsCategories),
+		("testFetchNewReleaseAlbumsUnderCategory", testFetchNewReleaseAlbumsUnderCategory),
 		]
 }
