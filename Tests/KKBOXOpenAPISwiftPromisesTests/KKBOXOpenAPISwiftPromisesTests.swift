@@ -452,6 +452,23 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 		self.wait(for: [exp], timeout: 3)
 	}
 
+	func testFetchCharts() {
+		let exp = self.expectation(description: "testFetchCharts")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetchCharts()
+		}.then { playlists in
+			XCTAssertTrue(playlists.playlists.count > 0)
+			for playlist in playlists.playlists {
+				self.validate(playlist: playlist)
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
 	static var allTests = [
 		("testFetchAccessToken", testFetchAccessToken),
 		("testFetchWithInvalidCredential", testFetchWithInvalidCredential),
@@ -473,5 +490,5 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 		("testFetchTracksInGenreStation", testFetchTracksInGenreStation),
 		("testFetchNewReleaseAlbumsCategories", testFetchNewReleaseAlbumsCategories),
 		("testFetchNewReleaseAlbumsUnderCategory", testFetchNewReleaseAlbumsUnderCategory),
-		]
+	]
 }

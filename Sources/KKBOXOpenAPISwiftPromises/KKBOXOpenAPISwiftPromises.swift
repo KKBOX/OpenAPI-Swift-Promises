@@ -377,7 +377,7 @@ extension KKBOXOpenAPI {
 	///   - offset: The offset. 0 by default.
 	///   - limit: The limit. 50 by default.
 	/// - Returns: A promise.
-	public func fetchCharts(territory: KKTerritory = .taiwan, offset: Int = 0, limit: Int = 100) -> Promise<KKPlaylistList> {
+	public func fetchCharts(territory: KKTerritory = .taiwan, offset: Int = 0, limit: Int = 50) -> Promise<KKPlaylistList> {
 		return Promise<KKPlaylistList>(on: .main) { fulfill, reject in
 			_ = try self.fetchCharts(territory: territory, offset: offset, limit: limit, callback: self.commonPromiseCallback(fulfill, reject))
 		}
