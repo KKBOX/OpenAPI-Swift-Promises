@@ -121,7 +121,7 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 		self.API.fetchAccessTokenByClientCredential().then { token in
 			return self.API.fetch(album: "WpTPGzNLeutVFHcFq6")
 		}.then { album in
-			XCTFail()
+			self.validate(album: album)
 			exp.fulfill()
 		}.catch { error in
 			XCTAssertTrue(error.localizedDescription == "Resource does not exist")
@@ -302,6 +302,28 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 		self.wait(for: [exp], timeout: 3)
 	}
 
+	func testFetchFeaturedPlaylistInCategory() {
+		let exp = self.expectation(description: "testFetchFeaturedPlaylistInCategory")
+		self.API.fetchAccessTokenByClientCredential().then { token in
+			return self.API.fetchFeaturedPlaylist(inCategory: "CrBHGk1J1KEsQlPLoz")
+		}.then { category in
+			XCTAssertTrue(category.ID.count > 0)
+			XCTAssertTrue(category.title.count > 0)
+			XCTAssertTrue(category.images.count > 0)
+			XCTAssertNotNil(category.playlists)
+			if let playlists = category.playlists {
+				for playlist in playlists.playlists {
+					self.validate(playlist: playlist)
+				}
+			}
+			exp.fulfill()
+		}.catch { error in
+			XCTFail(error.localizedDescription)
+			exp.fulfill()
+		}
+		self.wait(for: [exp], timeout: 3)
+	}
+
 
 	static var allTests = [
 		("testFetchAccessToken", testFetchAccessToken),
@@ -313,5 +335,10 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 		("testFetchTopTracksOfArtist", testFetchTopTracksOfArtist),
 		("testFetchRelatedArtists", testFetchRelatedArtists),
 		("testFetchPlaylist", testFetchPlaylist),
-	]
+		("testFetchTracksInPlaylist", testFetchTracksInPlaylist),
+		("testFetchFeaturedPlaylists", testFetchFeaturedPlaylists),
+		("testFetchNewHitsPlaylists", testFetchNewHitsPlaylists),
+		("testFetchFeaturedPlaylistCategories", testFetchFeaturedPlaylistCategories),
+		("testFetchFeaturedPlaylistInCategory", testFetchFeaturedPlaylistInCategory),
+		]
 }
