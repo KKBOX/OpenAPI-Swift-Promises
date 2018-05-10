@@ -21,7 +21,7 @@ let package = Package(
         .executable(name: "YourTargetName", targets: ["YourTargetName"])
     ],
     dependencies: [
-        .package(url: "https://github.com/zonble/OpenAPI-Swift-Promises", .upToNextMinor(from: "1.0.0"))
+        .package(url: "https://github.com/KKBOX/OpenAPI-Swift-Promises", .upToNextMinor(from: "1.0.0"))
     ],
     targets: [
         .target(name: "YourTargetName", dependencies: ["KKBOXOpenAPISwift"], path: "./Path/To/Your/Sources")
