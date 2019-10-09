@@ -9,7 +9,7 @@ import Promises
 import KKBOXOpenAPISwift
 
 extension KKBOXOpenAPI {
-	func commonPromiseCallback<T>(_ fulfill: @escaping (T) -> (), _ reject: @escaping Promise<T>.Reject) -> (KKAPIResult<T>) -> () {
+	func commonPromiseCallback<T>(_ fulfill: @escaping (T) -> (), _ reject: @escaping (Error) -> ()) -> (KKAPIResult<T>) -> () {
 		let callback: (KKAPIResult<T>) -> () = { result in
 			switch result {
 			case .error(let error):
