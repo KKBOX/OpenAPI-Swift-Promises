@@ -9,7 +9,7 @@ class KKBOXOpenAPISwiftPromisesTests: XCTestCase {
 
 	override func setUp() {
 		super.setUp()
-		self.API = KKBOXOpenAPI(clientID: "5fd35360d795498b6ac424fc9cb38fe7", secret: "8bb68d0d1c2b483794ee1a978c9d0b5d")
+		self.API = KKBOXOpenAPI(clientID: "c2330e22836b0012d2750f70dd503253", secret: "951802f5a6caae8b5905f4b6e76a557f")
 	}
 
 	//MARK: -
