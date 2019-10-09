@@ -1,6 +1,10 @@
 # KKBOX Open-API Swift SDK Promises Extension
 
+Copyright 2018-2019 KKBOX Technologies Limited
+
 Use KKBOX's Swift SDK in a promising way.
+
+[![Actions Status](https://github.com/KKBOX/OpenAPI-Swift-Promises/workflows/Build/badge.svg)](https://github.com/KKBOX/OpenAPI-Swift-Promises/actions)
 
 ## Introduction
 
@@ -8,7 +12,7 @@ The project extends [KKBOX's Open API Swift SDK](https://github.com/KKBOX/OpenAP
 
 ## Installation
 
-You can only install the extension with Swift Package Manager right now. Please add 
+You can only install the extension with Swift Package Manager right now. Please add
 
 ``` swift
 // swift-tools-version:4.0
@@ -67,7 +71,7 @@ self.API.fetchAccessTokenByClientCredential().then { _ in
 
 ## License
 
-Copyright 2018 KKBOX Technologies Limited
+Copyright 2018-2019 KKBOX Technologies Limited
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
